@@ -29,7 +29,7 @@ public class TMGUI extends JFrame{
 
     public TMGUI() throws IOException {
         setContentPane(mainPanel);
-        setTitle("Daftar Obat");
+        setTitle("Daftar Barang");
         setSize(500,500);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setVisible(true);
@@ -76,13 +76,11 @@ public class TMGUI extends JFrame{
 
                 System.out.println("\n"+ "Barang yang Namanya Berawalan Huruf S : ");
                 for (int i =0; i < responseModel.size(); i++) {
-
                     if (responseModel.get(i).getName().startsWith("S")) {
                         totalNama.add(responseModel);
                         System.out.println(totalNama.toArray().length + " " + responseModel.get(i).getName());
                         taNamaObat.setText(responseModel.get(i).getName());
                         tfJmlhTotalNama.setText(String.valueOf(totalNama.size()));
-
 
                     }
                 }
@@ -101,13 +99,13 @@ public class TMGUI extends JFrame{
 
                 System.out.println("----------------------------------------------------------------------------------");
                 System.out.println("\n"+ "Barang yang Berawalan Huruf S dan Harganya dibawah 7000 : ");
-
                 for (int u = 0; u< responseModel.size(); u++){
                     if (responseModel.get(u).getName().startsWith("S") && responseModel.get(u).getSell() <= 7000){
                         totalNamaHarga.add(responseModel);
                         System.out.println(totalNamaHarga.toArray().length + " "
                                 + responseModel.get(u).getName() + " " + responseModel.get(u).getSell());
                         tfTotalNamaHarga.setText(String.valueOf(totalNamaHarga.size()));
+
                     }
                 }
 
@@ -126,7 +124,6 @@ public class TMGUI extends JFrame{
     }
 
     public static void main(String[] args) throws IOException {
-        TMGUI myFrame = new TMGUI();
+        TMGUI frame = new TMGUI();
     }
-
 }
