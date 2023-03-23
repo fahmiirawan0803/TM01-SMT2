@@ -65,6 +65,7 @@ public class TMGUI extends JFrame{
         submitButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                System.out.println("----------------------------------------------------------------------------------");
                 System.out.println("\nResponse are : ");
                 System.out.println("Nama Obat yang Berawalan Huruf S dan Harganya dibawah 7000 : \n");
 
@@ -85,6 +86,8 @@ public class TMGUI extends JFrame{
 
                     }
                 }
+
+                System.out.println("----------------------------------------------------------------------------------");
                 System.out.println("\n"+ "Barang yang Harganya dibawah 7000 : ");
                 for (int o=0; o < responseModel.size(); o++){
                     if (responseModel.get(o).getSell() <= 7000){
@@ -96,7 +99,9 @@ public class TMGUI extends JFrame{
                     }
                 }
 
+                System.out.println("----------------------------------------------------------------------------------");
                 System.out.println("\n"+ "Barang yang Berawalan Huruf S dan Harganya dibawah 7000 : ");
+
                 for (int u = 0; u< responseModel.size(); u++){
                     if (responseModel.get(u).getName().startsWith("S") && responseModel.get(u).getSell() <= 7000){
                         totalNamaHarga.add(responseModel);
@@ -106,11 +111,14 @@ public class TMGUI extends JFrame{
                     }
                 }
 
-                System.out.println("\n" + "Jadi Total Nama Barang yang Berawalan Huruf S ada : "
+                System.out.println("\n" + "----------------------------------------------------------------------------------");
+                System.out.println("Jadi Total Nama Barang yang Berawalan Huruf S ada : "
                         + "\n" +  totalNama.size() + " Barang");
-                System.out.println("\n" + "Jadi Total  Barang yang Harganya Dibawah 7000 ada : "
+                System.out.println("\n" + "----------------------------------------------------------------------------------");
+                System.out.println("Jadi Total  Barang yang Harganya Dibawah 7000 ada : "
                         + "\n" +  totalHarga.size() + " Barang");
-                System.out.println("\n" + "Jadi Total Nama Barang yang Berawalan Huruf S dan Harganya Dibawah 7000 ada : "
+                System.out.println("\n" + "----------------------------------------------------------------------------------");
+                System.out.println("Jadi Total Nama Barang yang Berawalan Huruf S dan Harganya Dibawah 7000 ada : "
                         + "\n" +  totalNamaHarga.size() + " Barang");
 
             }
