@@ -26,7 +26,7 @@ public class FirstConnect {
             JSONObject myJSONObject = responseJSON.getJSONObject(i);
 
             resModel.setName(myJSONObject.getString("i_name"));
-            resModel.setSell(Integer.parseInt(myJSONObject.getString("i_sell")));
+            resModel.setSell(myJSONObject.getInt("i_sell"));
 
             responseModel.add(resModel);
         }
